@@ -23,6 +23,14 @@ from scipy import stats
 import torch.nn as nn
 import torch.nn.functional as F
 
+def get_sub_filepaths(folder: str):
+    """Recursively collect all file paths under `folder`."""
+    paths = []
+    for root, _, files in os.walk(folder):
+        for name in files:
+            paths.append(os.path.join(root, name))
+    return paths
+
 
 # import from https://github.com/Alibaba-MIIL/ASL/blob/main/src/loss_functions/losses.py
 class AsymmetricLoss(nn.Module):
