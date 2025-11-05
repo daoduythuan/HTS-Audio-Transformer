@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python3 create_indexes.py create_indexes --waveforms_hdf5_path="/home/data/audioset/hdf5s/indexes/balanced_train.h5"
+python3 create_indexes.py create_indexes --waveforms_hdf5_path="/home/data/audioset/hdf5s/indexes/balanced_train.h5" --indexes_hdf5_path="/home/data/audioset/hdf5s/indexes/balanced_train.h5"
 
 # Unbalanced training indexes
 for IDX in {00..40}; do
